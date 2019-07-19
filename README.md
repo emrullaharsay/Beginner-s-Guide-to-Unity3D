@@ -40,7 +40,7 @@
               }
             }
         ```
-    * Instead, look at this relatively better code. Clear naming tells you every thing you need, no need to solve equations and puzzles. And instead of magical type 1,2,3, there is enum values.
+    * Instead, look at this "relatively" better code. Clear naming tells you every thing you need, no need to solve equations and puzzles. And instead of magical type 1,2,3, there is enum values.
         ```csharp
         public enum AccountStatus
         {
@@ -91,9 +91,9 @@
 6. By the don't hard-code strings. Create variables, constants or something. :)
 ### Unity Tips
 1. You can use structs for small data objects.
-2. ScriptableObjects  are awesome way to store data such as achivements, your levels depends to the game, player info etc. They are independent of classes an gameobjects so you can use it anywhere and not lose it.
+2. ScriptableObjects  are awesome way to store data such as achivements, player info etc. They are independent of classes and gameobjects so you can use it anywhere and not lose it.
 3. Keep global variables as low as possible. Use [SerializeField] attribute to access it in the Editor and [HideInInspector] to hide your global variables.
-4. Keep your **Assets** folder in order. Don't just import every model, sprite in main Assets folder. [It's outrageous, egregious, preposterous.](https://www.youtube.com/watch?v=X8rxPrV-tn4).
+4. Keep your **Assets** folder in order. Don't just import every model and sprite in main Assets folder. [It's outrageous, egregious, preposterous.](https://www.youtube.com/watch?v=X8rxPrV-tn4).
     ```
     |-- Assets
         |-- Animations
@@ -132,15 +132,15 @@
             Destroy(other.gameObject);
         }
     ```
-6. Learn to Profiler tool in unity. [Grapy](https://github.com/Tayx94/graphy) is good monitoring tool for your mobile games.
-7. Don't ignore Collision Matrix in Unity3D. Limiting collisions in your game could be  more beneficial to performance of your game than you think.  
+6. Learn to use Profiler tool in unity. [Grapy](https://github.com/Tayx94/graphy) is good monitoring tool for your mobile games.
+7. Don't ignore Collision Matrix in Unity. Limiting collisions in your game could be  more beneficial to performance of your game than you think.  
     ![Tux, the Linux mascot](http://www.datasavvies.com/wp-content/uploads/2019/04/Screenshot_18.png)
 8. Stay away using Camera.main any where you want. Just assign it to a variable and call it in start. Unity searches all objects with tag "MainCamera" and gets the camera component of that game object.
     ```csharp
     GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     ```
     You don't want to call this in every few lines, don't you? Don't you???
-9. Use **Raycasts** with  __maxDistance__  parameter. And try to use **Layermask** for if possible. Checking every collider you hit with the ray,as you can guess, is less performant.
+9. Use **Raycasts** with  __maxDistance__  parameter. And try to use **Layermasks** if possible. Checking every collider you hit with the ray,as you can guess, is less performant.
 10. Try using **TextMeshPro** package for your text needs. You can get more crisp text and usually more performant.
 11. Use **tweening** for simple animations. Not just simple animations though, you can achieve a lot of things with tweening if you have some skill, just saying. No need to mention that they are more performant and easier to use. AAand free.:) 
     * [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676)
@@ -148,7 +148,7 @@
     * [iTween](https://assetstore.unity.com/packages/tools/animation/itween-84)
 12. This is more about programming but still. Learn to utilize [LINQ](https://docs.microsoft.com/en-us/dotnet/standard/using-linq) library. There will be times that it can be very handy.
 13. Object Pooling. just search it or you can read [this](https://www.raywenderlich.com/847-object-pooling-in-unity), you will understand its importance.
-    * Here is an [example script](https://gist.github.com/quill18/5a7cfffae68892621267). 
+    * Here is an [example script](https://gist.github.com/quill18/5a7cfffae68892621267) you can copy and paste. :)
 14. You can read this gamasutra article for deeper info, a little bit old but still relavent [article](https://www.gamasutra.com/blogs/HermanTulleken/20160812/279100/50_Tips_and_Best_Practices_for_Unity_2016_Edition.php).
 ### Contribute
  I am no expert, just a bit experienced than some. So if you see incorret or incomplete information, simply create a pull request. 
